@@ -37,3 +37,7 @@ button, input[type="submit"] {
   border-radius: 5%;
   background: #ddeaff;
 }
+
+ul {
+  list-style: none;
+}

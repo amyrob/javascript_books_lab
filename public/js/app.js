@@ -5,14 +5,7 @@ const handleFormSubmit = function (event) {
 
   const title = this.title.value;
   const author = this.author.value;
-
-  const radios = document.getElementsByName('category');
-  let category;
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      category = radios[i].value;
-    }
-  }
+  const category = this.category.value;
   const genre = this.genre.value;
 
   const book = new Book(title, author, category, genre);
@@ -21,7 +14,9 @@ const handleFormSubmit = function (event) {
 
   const container = document.querySelector('#book-list');
 
-  addNewBook(book, container);  
+  addNewBook(book, container);
+
+  this.reset();
 
 }
 
